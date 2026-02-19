@@ -25,7 +25,7 @@ Nessus Vuln Report is a **lightweight desktop tool** for analyzing Nessus CSV vu
 
 ### Running the Executable (Windows)
 
-1. Download `NessusVulnReport.zip` from the [Releases](https://github.com/YOUR_USERNAME/nessus-vuln-report/releases) page.  
+1. Download `NessusVulnReport.zip` from the [Releases](https://github.com/aeonstwilight/nessus-vuln-report/releases) page.  
 2. Extract the folder anywhere.  
 3. Run `app.exe` from the extracted folder.
 

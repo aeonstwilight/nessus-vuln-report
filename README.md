@@ -26,7 +26,7 @@ Nessus Vuln Report is a **lightweight desktop tool** for analyzing Nessus CSV vu
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/nessus-vuln-report.git
+git clone https://github.com/aeonstwilight/nessus-vuln-report.git
 cd nessus-vuln-report
 ```
 Create and activate a virtual environment:

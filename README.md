@@ -21,12 +21,6 @@ Nessus Vuln Report is a **lightweight desktop tool** for analyzing Nessus CSV vu
 
 ---
 
-## Screenshot
-
-![Nessus Vuln Report Screenshot](assets/screenshot.png)
-
----
-
 ## Installation
 
 1. Clone the repository:

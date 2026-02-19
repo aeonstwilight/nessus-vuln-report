@@ -25,3 +25,22 @@ nessus-vuln-report is a **lightweight desktop tool** for analyzing Nessus CSV vu
 ```bash
 git clone https://github.com/YOUR_USERNAME/nessus-vuln-report.git
 cd nessus-vuln-report
+
+python -m venv venv
+venv\Scripts\activate       # Windows
+pip install -r requirements.txt
+
+Usage
+
+Run the desktop application:
+
+python app.py
+
+
+Upload your Nessus CSV file.
+
+Click Analyze to see metrics and risk score.
+
+Use the buttons to view Severity Pie Chart, Top 5 Hosts, and Aging Buckets.
+
+Click Download Cleaned CSV to save the processed report.

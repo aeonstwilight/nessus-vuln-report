@@ -1,9 +1,9 @@
-# Nessus Vuln Report
+# Multi-Vendor Vulnerability Analyzer (CVSS-Based Severity)
 
 [![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A lightweight Windows desktop application for analyzing and normalizing Nessus CSV exports.
+**Multi-Vendor Vulnerability Analyzer** is a desktop application for analyzing vulnerability scan results from multiple vendors (Nessus, Qualys, Rapid7) with CVSS-based severity, SLA/aging calculations, and advanced metrics. It provides both single-scan analysis and scan comparison in a native GUI — no browser required.
 
 Designed for vulnerability management and SOC workflows, this tool provides SLA tracking, exploit visibility, risk scoring, and visual analytics — all in a native executable with no Python or browser required.
 
@@ -11,90 +11,77 @@ Designed for vulnerability management and SOC workflows, this tool provides SLA 
 
 ## Features
 
-### 📊 Metrics Dashboard
-- Total vulnerability count  
-- Severity breakdown (Critical, High, Medium, Low)  
-- Exploitable findings count  
-- CVSS ≥ 9 findings  
-- Oldest vulnerability detected  
-- Automated Risk Score & Risk Rating  
+- **Multi-Vendor Support:** Automatically detects scan source (Nessus, Qualys, Rapid7) with override option.
+- **CVSS-Based Severity:** Standardized FedRAMP-aligned severity mapping:
+  - Critical: 9.0–10.0
+  - High: 7.0–8.9
+  - Medium: 4.0–6.9
+  - Low: 0.1–3.9
+- **Compliance Profiles:** SLA/aging rules based on severity (FedRAMP Moderate/High or Custom).
+- **Single Scan Analysis:**
+  - Metrics summary: Critical, High, Medium, Low counts
+  - Expired vulnerabilities based on SLA
+  - CVSS ≥9 count and oldest vulnerability
+  - Risk Score calculation
+  - Enriched table including Plugin ID, Name, Host, CVSS, Age, Days Left, Expired status, and Solution
+- **Scan Comparison (New vs Old):**
+  - Highlights new, resolved, and unchanged vulnerabilities
+  - Comparison table with status per entry
+  - Downloadable CSV of comparison results
+- **Visualizations (Plotly):**
+  - Severity Pie Chart
+  - Top 5 Hosts by Critical Vulnerabilities
+  - Aging Buckets Pie Chart (0–30, 31–60, 61–90, 90+ days)
+- **Cleaned CSV Export:** Save enriched report for further analysis.
+- **Native Desktop GUI:** Fully interactive with tables, dropdowns, and buttons; no browser required.
 
 ---
-
-### ⏳ SLA & Remediation Tracking
-
-**Remediation Windows**
-- Critical / High → 30 days  
-- Medium → 90 days  
-- Low → 180 days  
-
-Automatically calculates:
-- Age (Days)  
-- Days Remaining  
-- Expired Status (⚠ indicator)  
-- “Expired Only” filtering  
-
----
-
-### 🔍 Interactive Vulnerability Table
-
-Displays:
-- Plugin ID  
-- Plugin Name  
-- Severity  
-- Host  
-- CVSS Score  
-- Exploit Availability  
-- Age (Days)  
-- Days Remaining  
-- Expired Status  
-- Solution (truncated for readability)  
-
-Includes severity filtering and duplicate cleanup.
-
----
-
-### 📈 Visualizations
-- Severity Pie Chart  
-- Top 5 Hosts by Critical Vulnerabilities  
-- Aging Buckets (0–30, 31–60, 61–90, 90+ days)  
-
----
-
-### 📤 Export & Portability
-- Download cleaned/normalized CSV  
-- Native Windows executable  
-- Fully offline operation  
-- No external data transmission  
-
----
-
-
-## Use Cases
-- Vulnerability management operations  
-- SLA compliance validation  
-- SOC triage support  
-- Audit preparation  
-- Pre-SIEM data normalization  
 
 ## Installation
 
+Clone the repository:
+
+
+- git clone https://github.com/yourusername/multi-vendor-vuln-analyzer.git
+- cd multi-vendor-vuln-analyzer
+- python -m venv venv
+- venv\Scripts\activate
+- pip install -r requirements.txt
+- python app.py
+
 ### Running the Executable (Windows)
 
-1. Download `NessusVulnReport.zip` from the [Releases](https://github.com/aeonstwilight/nessus-vuln-report/releases) page.  
-2. Extract the folder anywhere.  
-3. Run `app.exe` from the extracted folder.
+Windows Executable: You can also download the pre-built .exe release from the GitHub [Releases](https://github.com/aeonstwilight/multi-vendor-vuln-analyzer/releases) page. No Python installation is required.
+Extract the folder anywhere.  
+Run `app.exe` from the extracted folder.
 
+## Use Cases
+- Upload a CSV file from Nessus, Qualys, or Rapid7.
 
+- Optionally select a vendor override.
 
-## Usage
+- Choose a compliance profile.
 
-###
+- Click Analyze to view metrics and risk score.
 
-Upload your Nessus CSV file.
+- View enriched table and visualizations.
 
-Click Analyze to see metrics and risk score.
+- Click Download Cleaned CSV to save the processed report.
 
-Use the buttons to view Severity Pie Chart, Top 5 Hosts, and Aging Buckets.
+Scan Comparison
 
-Click Download Cleaned CSV to save the processed report.
+- Upload an old scan CSV and a new scan CSV.
+
+- Click Compare Scans to view:
+
+  - New vulnerabilities
+
+  - Resolved vulnerabilities
+
+  - Unchanged vulnerabilities
+
+- Download comparison results via CSV.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.

@@ -3,9 +3,9 @@
 [![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Multi-Vendor Vulnerability Analyzer** is a desktop application for analyzing vulnerability scan results from multiple vendors (Nessus, Qualys, Rapid7) with CVSS-based severity, SLA/aging calculations, and advanced metrics. It provides both single-scan analysis and scan comparison in a native GUI — no browser required.
+**Multi-Vendor Vulnerability Analyzer** is a desktop application for analyzing vulnerability scan results from multiple vendors (Nessus, Qualys, Rapid7) with CVSS-based severity, SLA/aging calculations, and advanced metrics. It provides both single-scan analysis and scan comparison in a native GUI, no browser required.
 
-Designed for vulnerability management and SOC workflows, this tool provides SLA tracking, exploit visibility, risk scoring, and visual analytics — all in a native executable with no Python or browser required.
+
 
 ---
 

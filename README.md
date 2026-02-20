@@ -55,7 +55,7 @@ Windows Executable: You can also download the pre-built .exe release from the Gi
 Extract the folder anywhere.  
 Run `app.exe` from the extracted folder.
 
-## Use Cases
+## Usage
 - Upload a CSV file from Nessus, Qualys, or Rapid7.
 
 - Optionally select a vendor override.

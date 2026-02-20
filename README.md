@@ -9,15 +9,124 @@ Nessus Vuln Report is a **lightweight desktop tool** for analyzing Nessus CSV vu
 
 ## Features
 
-- **Metrics Summary**: Critical, High, Medium, Low counts
-- **Risk Score**: Automatically calculated based on severity
-- **Exploitable Findings**: Count of vulnerabilities with exploits available
-- **Visualizations**:
-  - Severity Pie Chart
-  - Top 5 Hosts by Critical Vulnerabilities
-  - Aging Buckets (0-30, 31-60, 61-90, 90+ days)
-- **Cleaned CSV Download**: Save processed report for further analysis
-- **Native GUI**: No browser required
+🚀 Features
+📊 Metrics Summary Dashboard
+
+Total vulnerability count
+
+Severity breakdown: Critical, High, Medium, Low
+
+Exploitable findings count
+
+CVSS ≥ 9 findings
+
+Oldest vulnerability discovered
+
+Automatically calculated Risk Score & Risk Rating
+
+⏳ SLA & Remediation Tracking
+
+Automatic remediation windows:
+
+Critical / High → 30 days
+
+Medium → 90 days
+
+Low → 180 days
+
+Calculates:
+
+Age (Days)
+
+Days Remaining
+
+Expired Status
+
+⚠️ Visual indicator for expired vulnerabilities
+
+Filter to show Expired Only
+
+🔍 Interactive Vulnerability Table
+
+Displays:
+
+Plugin ID
+
+Plugin Name
+
+Severity
+
+Host
+
+CVSS Score
+
+Exploit Availability
+
+Age (Days)
+
+Days Remaining
+
+Expired Status
+
+Solution (truncated for readability)
+
+Severity-based filtering
+
+Designed to mimic SOC/Splunk-style review workflow
+
+📈 Visualizations
+
+Severity Pie Chart
+
+Top 5 Hosts by Critical Vulnerabilities
+
+Aging Buckets View
+
+0–30 days
+
+31–60 days
+
+61–90 days
+
+90+ days
+
+🛡 Intelligent Data Handling
+
+Automatically handles missing Nessus CSV columns
+
+Normalizes inconsistent severity formatting
+
+Cleans duplicate host/plugin combinations
+
+Prevents crashes from unexpected report variations
+
+📤 Export & Portability
+
+Download cleaned/normalized CSV for:
+
+Splunk ingestion
+
+Reporting
+
+Audit evidence
+
+Further analysis
+
+Native Windows executable
+
+No Python required for end users
+
+No browser required
+
+💻 Native Desktop Application
+
+Lightweight Windows executable
+
+No installation required
+
+Runs fully offline
+
+No data leaves your machine
 
 ---
 
